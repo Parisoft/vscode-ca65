@@ -31,6 +31,9 @@
 		},
 		{
 			"include": "#storage"
+		},
+		{
+			"include": "#expressions"
 		}
 	],
 	"repository": {
@@ -62,11 +65,11 @@
 					"match": "\\b[0-9]+\\b"
 				},
 				{
-					"name": "constant.language.unnamed-label.ca65",
-					"match": ":-+|:\\++"
+					"name": "variable.name.label.ca65",
+					"match": ":-+|:\\++|(^\\s*([@\\?]?\\w+)?[:=])"
 				},
 				{
-					"name": "constant.language.register.ca65",
+					"name": "variable.language.register.ca65",
 					"match": "\\b[aAxXyYsS]\\b"
 				}
 			]
@@ -118,37 +121,37 @@
 				},
 				{
 					"comment": "65C02 Opcodes",
-					"name": "keyword.operator.65c02.ca65",
+					"name": "entity.name.tag.65c02.ca65",
 					"match": "\\b(?i:bra|phx|phy|plx|ply|stz|trb|tsb|bbr0|bbr1|bbr2|bbr3|bbr4|bbr5|bbr6|bbr7|bbs0|bbs1|bbs2|bbs3|bbs4|bbs5|bbs6|bbs7|rmb0|rmb1|rmb2|rmb3|rmb4|rmb5|rmb6|rmb7|smb0|smb1|smb2|smb3|smb4|smb5|smb6|smb7)\\b"
 				},
 				{
 					"comment": "6502X Opcodes",
-					"name": "keyword.operator.6502x.ca65",
+					"name": "entity.name.tag.6502x.ca65",
 					"match": "\\b(?i:alr|anc|arr|axs|dcp|isc|las|lax|rla|rra|sax|slo|sre)\\b"
 				},
 				{
 					"comment": "65816 Opcodes",
-					"name": "keyword.operator.65816.ca65",
+					"name": "entity.name.tag.65816.ca65",
 					"match": "\\b(?i:brl|cop|jml|jsl|mvn|mvp|pea|pei|per|phb|phd|phk|plb|pld|rep|rtl|sep|stp|tcd|tcs|tdc|tsc|txy|tyx|wai|wdm|xba|xce)\\b"
 				},
 				{
 					"comment": "65816 Opcode Aliases",
-					"name": "keyword.operator.65816.ca65",
+					"name": "entity.name.tag.65816.ca65",
 					"match": "\\b(?i:bge|blt|cpa|dea|ina|swa|tad|tas|tda|tsa)\\b"
 				},
 				{
 					"comment": "4510 Opcode Aliases",
-					"name": "keyword.operator.4510.ca65",
+					"name": "entity.name.tag.4510.ca65",
 					"match": "\\b(?i:lbcc|lbcs|lbeq|lbmi|lbne|lbpl|lbvc|lbvs)\\b"
 				},
 				{
 					"comment": "Macpack generic",
-					"name": "keyword.operator.generic.ca65",
+					"name": "entity.name.tag.generic.ca65",
 					"match": "\\b(?i:add|sub|bge|blt|bgt|ble|bnz|bze)\\b"
 				},
 				{
 					"comment": "Macpack longbranch",
-					"name": "keyword.operator.longbranch.ca65",
+					"name": "entity.name.tag.longbranch.ca65",
 					"match": "\\b(?i:jeq|jne|jmi|jpl|jcs|jcc|jvs|jvc)\\b"
 				}
 			]
@@ -216,6 +219,18 @@
 				{
 					"name": "storage.type.end.ca65",
 					"match": "\\.(?i:end)(?i:enum|macro|mac|proc|scope|struct|union)\\s*"
+				}
+			]
+		},
+		"expressions": {
+			"patterns": [
+				{
+					"match": "\\b(\\w+)(::)\\b",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.accessor.ca65"
+						}
+					}
 				}
 			]
 		}

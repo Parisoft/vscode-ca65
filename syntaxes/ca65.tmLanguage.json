@@ -3,16 +3,34 @@
 	"name": "6502/65C02/65816 Assembly",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#comments"
+		},
+		{
+			"include": "#literals"
 		},
 		{
 			"include": "#strings"
 		},
 		{
-			"include": "#funcs"
+			"include": "#chars"
 		},
 		{
-			"include": "#blocks"
+			"include": "#operators"
+		},
+		{
+			"include": "#opcodes"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#pseudofuncs"
+		},
+		{
+			"include": "#statements"
+		},
+		{
+			"include": "#storage"
 		}
 	],
 	"repository": {
@@ -78,15 +96,15 @@
 		"operators": {
 			"patterns": [
 				{
-					"name": "keyword.operators.immediate.ca65",
+					"name": "keyword.other.immediate.ca65",
 					"match": "#"
 				},
 				{
-					"name": "keyword.operators.word.ca65",
+					"name": "keyword.other.word.ca65",
 					"match": "\\.(?i:bitnot|mod|bitand|bitxor|shl|shr|bitor|and|xor|or|not)\\b"
 				},
 				{
-					"name": "keyword.operators.misc.ca65",
+					"name": "keyword.operator.misc.ca65",
 					"match": "=|<>|:=|\\+|-|\\*|/|\\&|~|\\||<<|>>|\\&\\&|\\|\\||!|<|>|<=|>="
 				}
 			]
@@ -95,7 +113,7 @@
 			"patterns": [
 				{
 					"comment": "6502 Opcodes",
-					"name": "keyword.operator.6502.ca65",
+					"name": "entity.name.tag.6502.ca65",
 					"match": "\\b(?i:adc|and|asl|bcc|bcs|beq|bit|bmi|bne|bpl|brk|bvc|bvs|clc|cld|cli|clv|cmp|cpx|cpy|dec|dex|dey|eor|inc|inx|iny|jmp|jsr|lda|ldx|ldy|lsr|nop|ora|pha|php|pla|plp|rol|ror|rti|rts|sbc|sec|sed|sei|sta|stx|sty|tax|tay|tsx|txa|txs|tya)\\b"
 				},
 				{
@@ -179,7 +197,7 @@
 				},
 				{
 					"name": "keyword.control.end.ca65",
-					"match": "\\.(?i:end)(?i:endif|endrep|endrepeat)\\b"
+					"match": "\\.(?i:end)(?i:if|rep|repeat)\\b"
 				}
 			]
 		},

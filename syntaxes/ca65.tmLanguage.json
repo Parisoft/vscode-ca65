@@ -1,0 +1,50 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "HelloFalks",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#funcs"
+		},
+		{
+			"include": "#blocks"
+		}
+	],
+	"foldingStartMarker": "\\{\\s*$",
+	"foldingStopMarker": "^\\s*\\}",
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.hello",
+					"match": "\\b(if|while|for|return)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.hello",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hello",
+					"match": "\\\\."
+				}
+			]
+		},
+		"funcs": {
+			"name": "support.function",
+			"match": "\\.(sizeof)"
+		},
+		"blocks": {
+			"name": "storage.type",
+			"match": "\\.(proc|repeat|scope)"
+		}
+	},
+	"scopeName": "source.hello"
+}

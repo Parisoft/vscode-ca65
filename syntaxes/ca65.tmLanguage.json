@@ -163,7 +163,7 @@
 				},
 				{
 					"name": "support.function.control.ca65",
-					"match": "\\.(?i:def|defined|definedmacro|ismnem|ismnemonic)\\b"
+					"match": "\\.(?i:def|defined|definedmacro|ismnem|ismnemonic|out)\\b"
 				}
 			]
 		},
@@ -171,11 +171,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.single.ca65",
-					"match": "\\.(?i:a16|a8|assert|else|elseif|end|error|exitmac|exitmacro|fatal|i16|i8|if|ifblank|ifconst|ifdef|ifnblank|ifndef|ifnref|ifp02|ifp4510|ifp816|ifpc02|ifpdtv|ifpsc02|ifref)\\b"
+					"match": "\\.(?i:a16|a8|assert|else|elseif|end|error|exitmac|exitmacro|fatal|i16|i8|p02|p4510|p816|pc02|pdtv|psc02|setcpu|warning)\\b"
 				},
 				{
 					"name": "keyword.control.begin.ca65",
-					"match": "\\.(?i:)\\b"
+					"match": "\\.(?i:if|ifblank|ifconst|ifdef|ifnblank|ifndef|ifnref|ifp02|ifp4510|ifp816|ifpc02|ifpdtv|ifpsc02|ifref|repeat)\\b"
 				},
 				{
 					"name": "keyword.control.end.ca65",
@@ -187,7 +187,7 @@
 			"patterns": [
 				{
 					"name": "storage.type.single.ca65",
-					"match": "\\.(?i:addr|align|ascizz|autoimport|bankbytes|bss|byt|byte|case|charmap|code|condes|constructor|data|dbyt|debuginfo|define|delmac|delmacro|destructor|dword|export|exportzp|faraddr|feature|fileopt|fopt|forceimport|global|globalzp|hibytes|import|importzp|incbin|include|interruptor|linecont|list|listbytes)\\b"
+					"match": "\\.(?i:addr|align|ascizz|autoimport|bankbytes|bss|byt|byte|case|charmap|code|condes|constructor|data|dbyt|debuginfo|define|delmac|delmacro|destructor|dword|export|exportzp|faraddr|feature|fileopt|fopt|forceimport|global|globalzp|hibytes|import|importzp|incbin|include|interruptor|linecont|list|listbytes|lobytes|local|localchar|macpack|org|pagelen|pagelength|popcpu|popseg|pushcpu|pushseg|reloc|res|rodata|segment|set|smart|tag|undef|undefine|word|zp|zeropage)\\b"
 				},
 				{
 					"name": "storage.type.begin.ca65",

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "HelloFalks",
+	"name": "6502/65C02/65816 Assembly",
 	"patterns": [
 		{
 			"include": "#keywords"
@@ -46,5 +46,5 @@
 			"match": "\\.(proc|repeat|scope)"
 		}
 	},
-	"scopeName": "source.hello"
+	"scopeName": "source.ca65"
 }

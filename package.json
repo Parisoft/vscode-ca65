@@ -105,6 +105,29 @@
                     }
                 ]
             }
+        ],
+        "configuration": [
+            {
+                "title": "Client Configuration",
+                "properties": {
+                    "ca65.maxNumberOfProblems": {
+                        "type": "number",
+                        "default": 100,
+                        "description": "Controls the maximum number of problems produced by the server."
+                    },
+                    "ca65.trace.server": {
+                        "type": "string",
+                        "enum": [
+                            "off",
+                            "messages",
+                            "verbose"
+                        ],
+                        "format": "json",
+                        "default": "message",
+                        "description": "Traces the communication between VSCode and the ca65 service."
+                    }
+                }
+            }
         ]
     },
     "scripts": {

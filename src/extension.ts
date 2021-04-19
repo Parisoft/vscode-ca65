@@ -33,11 +33,15 @@ export function activate(context: vscode.ExtensionContext) {
 		// Options to control the language client
 		let clientOptions: LanguageClientOptions = {
 			// Register the server for plain text documents
-			documentSelector: [{ scheme: 'file', language: 'ca65' }]
+			documentSelector: [{ scheme: 'file', language: 'ca65' }],
+			synchronize: {
+				// Notify the server about file changes to '.s files contained in the workspace
+				fileEvents: vscode.workspace.createFileSystemWatcher('**/.s')
+			}
 		};
 
 		// Create the language client and start the client.
-		let disposable = new LanguageClient('vscode-ca65', 'ca65 Language Server', serverOptions, clientOptions).start();
+		let disposable = new LanguageClient('ca65', 'ca65 Language Server', serverOptions, clientOptions).start();
 
 		// Disposables to remove on deactivation.
 		context.subscriptions.push(disposable);

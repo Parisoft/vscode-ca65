@@ -137,7 +137,7 @@
 				{
 					"comment": "65816 Opcode Aliases",
 					"name": "entity.name.tag.65816.ca65",
-					"match": "\\b(?i:bge|blt|cpa|dea|ina|swa|tad|tas|tda|tsa)\\b"
+					"match": "\\b(?i:cpa|dea|ina|swa|tad|tas|tda|tsa)\\b"
 				},
 				{
 					"comment": "4510 Opcode Aliases",

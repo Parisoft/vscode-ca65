@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 		// path to the launcher.jar
 		let jarfile = path.join(__dirname, '..', 'lsp', 'ca65-language-server.jar');
 		let debug = '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8484';
-		const args: string[] = [debug, '-jar', jarfile];
+		const args: string[] = [ '-jar', jarfile];
 
 		// Set the server options 
 		// -- java execution path
